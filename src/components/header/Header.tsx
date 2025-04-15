@@ -14,7 +14,7 @@ const Header = () => {
       <nav className="flex gap-6 items-center text-lg">
         {["Início", "Sobre", "Turismo", "Cultura", "Contato"].map((item) => (
           <Link
-            href={item === "Sobre" ? "/about" : "#"}
+            href={item === "Sobre" ? "/about" : item === "Início" ? "/" : "#"}
             key={item}
             className="hover:text-amber-300 transition-colors pb-1 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-amber-400 after:transition-all"
           >
