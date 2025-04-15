@@ -5,8 +5,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <>
-      {/* Sobre Nós */}
+    <main>
       <div className="max-w-5xl mx-auto px-6">
         <h1 className="text-4xl font-bold text-orange-400 text-center">
           Sobre Nós
@@ -17,7 +16,7 @@ const About = () => {
         </p>
 
         <Image
-          src="https://cdn-pen.nuneshost.com/images/160809-farol.jpg"
+          src="/Farolv3.jpg"
           alt="Imagem ilustrativa"
           width={800}
           height={600}
@@ -34,10 +33,10 @@ const About = () => {
 
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            "https://www.minasgerais.com.br/imagens/atracoes/1627078023S2IYrHIQcq.jpg",
-            "https://d32exhd5j7o0z1.cloudfront.net/variants/jVYTJGiD5rJonWBeF6LfKHFe/9d762a2163f649f3bcd33b8bcc9b341fefaa7965682a22b9c7222964248327ef",
-            "https://www.minasgerais.com.br/imagens/atracoes/1627074007JlPJhiQHL0.jpg",
-            "https://www.minasgerais.com.br/imagens/atracoes/1627047653oFNFPYuu2m.jpg",
+            "/Farolv2.jpg",
+            "/AlmenaraMacro.jpeg",
+            "/AlmenaraVisaoCima.jpg",
+            "/MemorialCultural.jpg",
           ].map((src, index) => (
             <div
               key={index}
@@ -53,8 +52,6 @@ const About = () => {
           ))}
         </div>
       </div>
-
-      {/* Nossa História */}
       <div className="mt-12 mb-20 max-w-5xl mx-auto px-6">
         <h2 className="text-2xl font-semibold text-orange-400 text-center">
           Nossa História
@@ -74,7 +71,7 @@ const About = () => {
           </p>
         ))}
       </div>
-    </>
+    </main>
   );
 };
 
