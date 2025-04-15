@@ -3,122 +3,11 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-
-type Destaque = {
-  id: string;
-  titulo: string;
-  icone: string;
-  imagens: { src: string; alt: string; desc?: string }[];
-  descricao: string;
-  detalhes: string[];
-};
+import { destaques } from "./data";
 
 export default function DestaquesSection() {
   const [destaqueAtivo, setDestaqueAtivo] = useState<string>("ceramica");
   const [isLoading, setIsLoading] = useState(true);
-
-  const destaques: Destaque[] = [
-    {
-      id: "ceramica",
-      titulo: "Cerâmica Artesanal",
-      icone: "🏺",
-      imagens: [
-        {
-          src: "/Ceramica1.jpg",
-          alt: "Peças de barro tradicionais",
-          desc: "Técnicas ancestrais de modelagem e queima",
-        },
-        {
-          src: "/Ceramica2.jpeg",
-          alt: "Artesã trabalhando no torno",
-          desc: "Tradição passada de geração em geração",
-        },
-      ],
-      descricao:
-        "A cerâmica de Almenara é uma das expressões culturais mais autênticas do Vale do Jequitinhonha.",
-      detalhes: [
-        "Matérias-primas extraídas das margens do Rio Jequitinhonha",
-        "Processo artesanal desde a coleta do barro até a queima",
-        "Peças utilitárias e decorativas com identidade cultural",
-        "Exposições permanentes na Casa do Artesão",
-      ],
-    },
-    {
-      id: "rio",
-      titulo: "Rio Jequitinhonha",
-      icone: "🌊",
-      imagens: [
-        {
-          src: "/PonteAlmenara.jpeg",
-          alt: "Ponte sobre o Rio Jequitinhonha",
-          desc: "Ponto de conexão entre regiões do Vale",
-        },
-        {
-          src: "/RioJequitinhonha.jpg",
-          alt: "Paisagem do rio ao entardecer",
-          desc: "Cenário de paz e beleza natural",
-        },
-      ],
-      descricao:
-        "O Rio Jequitinhonha é o coração do Vale, fonte de vida, cultura e inspiração.",
-      detalhes: [
-        "Importante para transporte, pesca e lazer",
-        "Inspiração para obras de arte e músicas regionais",
-        "Cenário de eventos culturais e festas",
-        "Patrimônio natural de Minas Gerais",
-      ],
-    },
-    {
-      id: "castelo",
-      titulo: "Castelo de Almenara",
-      icone: "🏰",
-      imagens: [
-        {
-          src: "/CasteloAlemanara.jpg",
-          alt: "Castelo de Almenara",
-          desc: "Construção histórica da década de 1960",
-        },
-        {
-          src: "/CasteloInterior.jpg",
-          alt: "Interior do Castelo",
-          desc: "Salões preservados com móveis antigos",
-        },
-      ],
-      descricao:
-        "O Castelo é um dos símbolos arquitetônicos de Almenara, carregando memórias e histórias locais.",
-      detalhes: [
-        "Construção com influência europeia",
-        "Ponto turístico e de visitação guiada",
-        "Cenário para fotos e eventos culturais",
-        "Tombado como patrimônio local",
-      ],
-    },
-    {
-      id: "culinaria",
-      titulo: "Culinária Típica",
-      icone: "🍲",
-      imagens: [
-        {
-          src: "/Culinaria1.jpg",
-          alt: "Prato típico mineiro",
-          desc: "Feijão tropeiro, carne de sol e angu",
-        },
-        {
-          src: "/Culinaria2.jpg",
-          alt: "Doces caseiros",
-          desc: "Rapadura, doce de leite e compotas",
-        },
-      ],
-      descricao:
-        "Os sabores de Almenara revelam a alma do sertão mineiro, com pratos feitos com carinho e tradição.",
-      detalhes: [
-        "Ingredientes locais e receitas de família",
-        "Restaurantes e feiras gastronômicas",
-        "Doces artesanais premiados",
-        "Influência da cultura quilombola e indígena",
-      ],
-    },
-  ];
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 800);
@@ -145,7 +34,7 @@ export default function DestaquesSection() {
           <button
             key={destaque.id}
             onClick={() => setDestaqueAtivo(destaque.id)}
-            className={`flex items-center px-5 py-3 rounded-full transition-all text-sm md:text-base ${
+            className={`cursor-pointer flex items-center px-5 py-3 rounded-full transition-all text-sm md:text-base ${
               destaqueAtivo === destaque.id
                 ? "bg-amber-600 text-white shadow-md"
                 : "bg-white text-amber-800 hover:bg-amber-100 border border-amber-200"
