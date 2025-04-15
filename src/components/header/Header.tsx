@@ -1,12 +1,20 @@
+"use client";
+
 import Link from "next/link";
 
 const Header = () => {
   return (
     <header className="flex justify-between items-center text-amber-100 max-w-7xl mx-auto w-full">
       <div className="flex items-center gap-2 relative group">
-        <h1 className="text-3xl font-bold">
+        <Link
+          href="/"
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="text-3xl font-bold"
+        >
           Farolzinho do <span className="text-amber-400">Vale</span>
-        </h1>
+        </Link>
         <span className="text-amber-300 text-sm absolute -right-5 -bottom-3 group-hover:rotate-12 transition-transform">
           Almenara-MG
         </span>
