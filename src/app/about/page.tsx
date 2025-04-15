@@ -65,6 +65,7 @@ const About = () => {
         ].map((paragraph, index) => (
           <p
             key={index}
+            aria-label="about"
             className="mt-4 text-lg text-gray-700 text-justify leading-relaxed"
           >
             {paragraph}
