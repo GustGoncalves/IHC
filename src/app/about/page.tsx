@@ -6,21 +6,23 @@ import Image from "next/image";
 const About = () => {
   return (
     <main>
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-6 flex flex-col items-center">
         <h1 className="text-4xl font-bold text-orange-400 text-center">
           Sobre Nós
         </h1>
         <p className="mt-4 text-lg text-gray-700 text-center">
-          Bem-vindo à página Sobre! Aqui você encontrará informações sobre o
-          Farolzinho do Vale.
+          O Farolzinho do Vale é uma comunidade localizada no Vale do
+          Jequitinhonha, na região de Almenara, no estado de Minas Gerais,
+          Brasil. Nossa missão é promover o turismo e a cultura na região,
+          oferecendo uma experiência autêntica e memória para os visitantes.
         </p>
 
         <Image
           src="/Farolv3.jpg"
           alt="Imagem ilustrativa"
-          width={800}
+          width={600}
           height={600}
-          className="w-full h-auto rounded-lg shadow-lg mt-6"
+          className="h-auto rounded-lg shadow-lg mt-6"
         />
       </div>
 

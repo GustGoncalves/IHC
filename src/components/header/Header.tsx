@@ -35,9 +35,7 @@ const Header = () => {
   const navItems = [
     { name: "Início", path: "/" },
     { name: "Sobre", path: "/about" },
-    { name: "Turismo", path: "/" },
-    { name: "Cultura", path: "/" },
-    { name: "Contato", path: "/" },
+    { name: "Blog", path: "/blog" },
   ];
 
   return (
