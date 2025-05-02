@@ -14,7 +14,8 @@ import Autoplay from "embla-carousel-autoplay";
 type CarouselImage = {
   src: string;
   alt: string;
-  caption?: string;
+  caption: string;
+  mapsLink: string;
 };
 
 const images: CarouselImage[] = [
@@ -22,16 +23,19 @@ const images: CarouselImage[] = [
     src: "/IgrejaSaoJoaoBatista.jpg",
     alt: "Igreja São João Batista",
     caption: "Patrimônio histórico e religioso da cidade",
+    mapsLink: "https://maps.app.goo.gl/bWe3z6Um8pr9DMwg9",
   },
   {
     src: "/CasteloAlemanara.jpg",
     alt: "Castelo de Almenara",
     caption: "Marco arquitetônico construído na década de 1960",
+    mapsLink: "https://maps.app.goo.gl/ggPcVyfRk1rpeVPq7",
   },
   {
     src: "/PonteAlmenara.jpeg",
     alt: "Ponte sobre o Rio Jequitinhonha",
     caption: "Ligando paisagens e histórias do Vale",
+    mapsLink: "https://maps.app.goo.gl/4gp2ig2nRA7LNE8S9",
   },
 ];
 
@@ -59,7 +63,12 @@ export default function CarrosselAlmenara() {
                 key={index}
                 className="basis-full md:basis-2/3 lg:basis-1/2 px-4"
               >
-                <div className="relative aspect-video overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 border-2 border-amber-700/30">
+                <a
+                  href={image.mapsLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block relative aspect-video overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 border-2 border-amber-700/30"
+                >
                   <Image
                     src={image.src}
                     alt={image.alt}
@@ -95,7 +104,7 @@ export default function CarrosselAlmenara() {
                   <span className="absolute top-4 right-4 bg-amber-600/90 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">
                     Patrimônio Cultural
                   </span>
-                </div>
+                </a>
               </CarouselItem>
             ))}
           </CarouselContent>

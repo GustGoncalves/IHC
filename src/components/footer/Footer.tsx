@@ -8,10 +8,13 @@ const Footer = () => {
           Farolzinho do Vale © {new Date().getFullYear()} - Almenara/MG
         </p>
         <div className="flex justify-center space-x-4">
-          <a href="https://www.instagram.com/prefeituraalmenara">
+          <a
+            href="https://www.instagram.com/prefeituraalmenara"
+            target="_blank"
+          >
             <Instagram />
           </a>
-          <a href="https://www.facebook.com/valealmenara">
+          <a href="https://www.facebook.com/valealmenara" target="_blank">
             <Facebook />
           </a>
         </div>
