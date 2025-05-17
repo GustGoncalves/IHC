@@ -2,10 +2,10 @@ import { CalendarDays, Clock, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { blogPosts } from "../blog/data";
-import { upcomingEvents } from "../blog/data";
+import { blogPosts } from "./data";
+import { upcomingEvents } from "./data";
 
-const Blog = () => {
+const Eventos = () => {
   return (
     <main className="bg-amber-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -238,4 +238,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Eventos;

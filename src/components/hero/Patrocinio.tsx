@@ -51,14 +51,14 @@ const Patrocionio = () => {
                 Almenara-MG.
               </p>
 
-              <div className="flex flex-wrap gap-3">
-                <button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full transition cursor-pointer">
-                  Programação Completa
-                </button>
+              <a
+                href="https://maps.app.goo.gl/R7t7qyeANGBLLUkz9"
+                target="_blank"
+              >
                 <button className="border border-amber-600 text-amber-600 hover:bg-amber-50 px-6 py-2 rounded-full transition cursor-pointer">
                   Como Chegar
                 </button>
-              </div>
+              </a>
             </div>
           </div>
         </div>
