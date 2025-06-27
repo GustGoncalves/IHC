@@ -3,6 +3,12 @@ import { Rubik_Mono_One } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import Hotjar from "@hotjar/browser";
+
+const siteId = 6406339;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId, hotjarVersion);
 
 const rubikMonoOne = Rubik_Mono_One({
   weight: "400",
