@@ -3,12 +3,7 @@ import { Rubik_Mono_One } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
-import Hotjar from "@hotjar/browser";
-
-const siteId = 6406339;
-const hotjarVersion = 6;
-
-Hotjar.init(siteId, hotjarVersion);
+import Script from "next/script";
 
 const rubikMonoOne = Rubik_Mono_One({
   weight: "400",
@@ -30,6 +25,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${rubikMonoOne.variable} scroll-smooth`}>
+      <head>
+        <Script
+          id="hotjar-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(h,o,t,j,a,r){
+                  h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                  h._hjSettings={hjid:6406339,hjsv:6};
+                  a=o.getElementsByTagName('head')[0];
+                  r=o.createElement('script');r.async=1;
+                  r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                  a.appendChild(r);
+              })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col bg-amber-50">
         <header className="fixed top-0 left-0 w-full bg-amber-900 p-4 z-50 shadow-md border-b border-amber-700">
           <Header />
