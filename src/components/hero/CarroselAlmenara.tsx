@@ -26,7 +26,7 @@ const images: CarouselImage[] = [
     mapsLink: "https://maps.app.goo.gl/bWe3z6Um8pr9DMwg9",
   },
   {
-    src: "/CasteloAlemanara.jpg",
+    src: "/IgrejaSaoJoaoBatista.jpg",
     alt: "Castelo de Almenara",
     caption: "Marco arquitetônico construído na década de 1960",
     mapsLink: "https://maps.app.goo.gl/ggPcVyfRk1rpeVPq7",
