@@ -66,7 +66,7 @@ export const destaques: Destaque[] = [
     icone: "🏰",
     imagens: [
       {
-        src: "/CasteloAlmenara1.jpg",
+        src: "/CasteloAlmenara.jpg",
         alt: "Castelo de Almenara",
         desc: "Sentinela de pedra sobre a paisagem sertaneja",
       },
